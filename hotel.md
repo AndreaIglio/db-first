@@ -18,26 +18,27 @@ Buon lavoro e buon weekend! -->
 <!-- Rooms details -->
 - room_number SMALLINT PRIMARYKEY NOTNULL
 - room_type VARCHAR(20) NOTNULL
-- price int TINYINT NOTNULL
+- room_status TINYINT NOTNULL
+- price TINYINT NOTNULL
 - room_beds int TINYINT NOTNULL
 - wi-fi string VARCHAR (5) NULL
 - tv string VARCHAR(5) NULL
-- customer_id BIGINT FOREIGNKEY NOTNULL UNIQUE
-<!-- Customer details -->
-- customer_id BIGINT PRIMARYKEY NOTNULL UNIQUE
-- customer_name VARCHAR (20) NOTNULL
-- customer_lastname VARCHAR (20) NOTNULL
-- customer_age TINYINT NOTNULL
-- customer_phone_number TINYINT NOTNULL
-- customer_email VARCHAR(30) NULL
-- customer_city VARCHAR(10) NOTNULL
-- customer_state VARCHAR (10) NOTNULL
-- customer_zip_code TINYINT NOTNULL
+- guest_id BIGINT FOREIGNKEY NOTNULL UNIQUE
+<!-- Guest details -->
+- guest_id BIGINT PRIMARYKEY NOTNULL UNIQUE
+- guest_name VARCHAR (20) NOTNULL
+- guest_lastname VARCHAR (20) NOTNULL
+- guest_age TINYINT NOTNULL
+- guest_phone_number TINYINT NOTNULL
+- guest_email VARCHAR(50) NULL
+- guest_city VARCHAR(20) NOTNULL
+- guest_state VARCHAR (20) NOTNULL
+- guest_zip_code TINYINT NOTNULL
 <!-- Reservation details -->
 - reservation_number BIGINT PRIMARYKEY NOTNULL UNIQUE
 - check_in_date DATETIME NOTNULL
 - check_out date DATETIME NOTNULL
-- status VARCHAR(10) NOTNULL
+- status VARCHAR(20) NOTNULL
 - number_of_guests TINYINT NOTNULL
 - reservation_date DATETIME NOTNULL
 
