@@ -37,7 +37,7 @@ Buon lavoro e buon weekend! -->
 <!-- Reservation details -->
 - reservation_number BIGINT PRIMARYKEY NOTNULL UNIQUE
 - check_in_date DATETIME NOTNULL
-- check_out date DATETIME NOTNULL
+- check_out_date DATETIME NOTNULL
 - status VARCHAR(20) NOTNULL
 - number_of_guests TINYINT NOTNULL
 - reservation_date DATETIME NOTNULL
